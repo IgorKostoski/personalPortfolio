@@ -7,46 +7,38 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 
-
-
-
-
 export const sendEmail = async (formData: FormData) => {
+  const senderEmail = formData.get('senderEmail');
+  const message = formData.get('message');
 
+  if (!validateString(senderEmail, 500)) {
+    return { 
+      error: "Invalid sender email" 
+    };
+  }
 
-    const senderEmail = formData.get("senderEmail");
-    
+  if (!validateString(message, 5000)) {
+    return {
+      error: "Invalid message"
+    };
+  }
 
-    const message = formData.get('message');
-
-
-    //simple server validation 
-    if(!validateString(senderEmail, 500)) {
-        return {
-            error: "Invalid sender email",
-        };
-    }
-
-    if (!validateString(message, 5000)) {
-        return{
-            
-                error: "Invalid message",
-            
-        };
-
-    }
-
-
-   try {
-
+  // simple server validation
+  try {
     await resend.emails.send({
-        from: "<Contact Form onboarding@resend.dev>",
-        to: "igorkostoski@ymail.com",
-        subject: "Message from contact form",
-        reply_to: senderEmail as string,
-        text: message as string,
+      from: 'Contact Form <onboarding@resend.dev>',
+      to: 'igorkostoski@ymail.com',
+      subject: 'Message from contact form',
+      reply_to: senderEmail as string,
+      text: message as string,
     });
-} catch(error: unknown){
+    return {
+      success: true
+    };
+  } catch (error: unknown) {
     console.log(error);
-     }
-  };
+    return {
+      error: "Failed to send email"
+    };
+  }
+};

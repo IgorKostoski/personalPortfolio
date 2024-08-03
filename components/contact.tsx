@@ -52,15 +52,15 @@ export default function Contact() {
         <input
           className="
                     h-14 rounded-lg borderBlack"
-          name="senderEmail"
-          type="email"
+          name='senderEmail'
+          type='email'
           required
           maxLength={500}
           placeholder=" Your Email"
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack"
-          name="message"
+          name='message'
           required
           maxLength={5000}
           placeholder=" Your Message"
