@@ -84,10 +84,9 @@ const {ref} = useSectionInView("Home", 0.5);
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Igor.</span> I'm a{" "}
-        <span className="font-bold">Software developer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My core is{" "}
-        <span className="underline">Java</span>.
+        <span className="font-bold">Software developer</span> from{" "}
+        <span className="font-bold">Cologne.</span> 
+       
       </motion.h1>
 
       <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4
