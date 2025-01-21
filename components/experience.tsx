@@ -1,16 +1,18 @@
 "use client";
 
-import React from 'react';
+import React, { useContext } from 'react';
 import SectionHeading from './section-heading';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
+import { useTheme } from '@/context/theme-context';
 
 
 export default function Experience() {
 
   const { ref } = useSectionInView("Experience");
+  const { theme } = useTheme();
 
   return (
     <section id='experience' 
@@ -28,6 +30,10 @@ export default function Experience() {
             key={index}
             date={item.date}
             icon={item.icon}
+            iconStyle={{ background: theme === "light" ? "white" : 
+              "rgba(255,255,255,0.15)",
+              fontSize: "1.5rem",
+             }}
 
             contentStyle={{
                 background: "#7dd3fc",
@@ -36,18 +42,20 @@ export default function Experience() {
             }}
 
             contentArrowStyle={{
-                borderRight: "0.4rem solid #1e40af",
+                borderRight: theme === "light" ? "0.4rem solid #9ca3af" 
+                : "0.4rem solid rgba(255,255,255,0.5)",
             }}
 
-            iconStyle={{
-                background: "#7dd3fc",
-                fontSize: "1.5rem"
-            }}
+            // iconStyle={{
+            //     background: "#7dd3fc",
+            //     fontSize: "1.5rem"
+            // }}
 
             >
               <h3 className='font-semibold capitalize'>{item.title}</h3>
               <p className='font-normal !mt-0'>{item.location}</p>
-              <p className='!mt-1 !font-normal text-sky-950'>{item.description}</p>
+              <p className='!mt-1 !font-normal text-sky-950
+              dark:text-white/75'>{item.description}</p>
             </VerticalTimelineElement>
             </React.Fragment>
          

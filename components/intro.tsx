@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
- 
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -11,29 +11,24 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-
 export default function Intro() {
+  //   const {ref, inView} = useInView({
+  //     threshold: 0.5,
+  //   });
+  //   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-//   const {ref, inView} = useInView({
-//     threshold: 0.5,
-//   });
-//   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  //   useEffect(() => {
+  //   if(inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection("Home");
+  //   }
+  // }, [inView, setActiveSection, timeOfLastClick]);
 
+  const { ref } = useSectionInView("Home", 0.5);
 
-//   useEffect(() => {
-//   if(inView && Date.now() - timeOfLastClick > 1000) {
-//     setActiveSection("Home");
-//   }
-// }, [inView, setActiveSection, timeOfLastClick]);
-
-const {ref} = useSectionInView("Home", 0.5);
-
- const {setActiveSection , setTimeOfLastClick}   =  useActiveSectionContext();
-
-
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section 
+    <section
       ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] 
@@ -51,7 +46,7 @@ const {ref} = useSectionInView("Home", 0.5);
             }}
           >
             <Image
-              src="https://media.licdn.com/dms/image/D4E03AQEkJKCT5JKgqg/profile-displayphoto-shrink_100_100/0/1675036151704?e=1709769600&v=beta&t=_8p6ftqOBnx-ld7Rv3xtd9D70ZIvlsux4g7w-uE4kIo"
+              src="https://media.licdn.com/dms/image/v2/D4E35AQFu5-UKJLcN2A/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1736251976114?e=1736859600&v=beta&t=CeY2uHT0gVH39ooNjIgmD-42IB1hNzeGJDULFUkE72I"
               alt="Igors portrait"
               width="192"
               height="192"
@@ -85,28 +80,27 @@ const {ref} = useSectionInView("Home", 0.5);
       >
         <span className="font-bold">Hello, I'm Igor.</span> I'm a{" "}
         <span className="font-bold">Software developer</span> from{" "}
-        <span className="font-bold">Cologne.</span> 
-       
+        <span className="font-bold">Cologne.</span>
       </motion.h1>
 
-      <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4
       text-lg font-medium"
-            initial={{opacity: 0, y: 100}}
-            animate={{opacity: 1, y: 0}}
-            transition={{
-              delay: 0.1,
-            }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
       >
         <Link
           href="#contact"
           className="group bg-sky-900 text-white px-7
         py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 
-         hover:bg-sky-950 active:scale-105 transition" 
-         onClick={() => {
-          setActiveSection("Contact");
-          setTimeOfLastClick(Date.now());
-
-         }}
+         hover:bg-sky-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -122,18 +116,22 @@ const {ref} = useSectionInView("Home", 0.5);
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-
-        <a className="bg-white p-4 text-sky-900 hover:text-sky-950 flex items-center gap-2 rounded-full 
+        <a
+          className="bg-white p-4 text-sky-900 hover:text-sky-950 flex items-center gap-2 rounded-full 
         focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer 
-        borderBlack dark:bg-white/10 dark:text-white/60" href="https://www.linkedin.com/in/igor-kostoski-890255255/" target="_blank">
+        borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.linkedin.com/in/igor-kostoski-890255255/"
+          target="_blank"
+        >
           <BsLinkedin />
         </a>
 
-
-
-        <a className="bg-white p-4 text-sky-900 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] 
-          hover:text-sky-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60" 
-          href="https://github.com/IgorKostoski" target="_blank">
+        <a
+          className="bg-white p-4 text-sky-900 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] 
+          hover:text-sky-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://github.com/IgorKostoski"
+          target="_blank"
+        >
           <FaGithubSquare />
         </a>
       </motion.div>

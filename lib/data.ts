@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaUniversity } from "react-icons/fa";
+import { SiHtmlacademy } from "react-icons/si";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -33,33 +34,60 @@ export const links = [
   },
 ] as const;
 
+type experiencesData = {
+  title: string;
+  location: string;
+  description: string[];
+  icon: JSX.Element;
+  date: string;
+};
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+    title: "Graduated Gymnasium- 'Pance Popovski'",
+    location: "Gostivar, North Macedonia",
+    description: "I graduated after 4 years of studying.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2006 - 2009",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Iustinianus Primus Faculty of Law",
+    location: "Skopje, North Macedonia",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "I graduated after 3 years of studying, with a degree as Bachelor of Political Science",
+    icon: React.createElement(FaUniversity),
+    date: "2012 - 2014",
   },
+  // {
+  //   title: "Rotation Worker at Burger King",
+  //   location: "Cologne, Germany",
+  //   description:[
+  //     "Delivered exceptional customer service at the cash register, showcasing strong communication and interpersonal skills.",
+  //     "Trained and mentored new employees, demonstrating leadership, adaptability, and the ability to explain processes clearly.",
+  //     "Maintained high standards of cleanliness and organization, emphasizing attention to detail and consistency in following procedures.",
+  //   ]
+
+  //     ,
+  //   icon: React.createElement(FaReact),
+  //   date: "2021 - present",
+  // },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Testing Academy- Brainster",
+    location: "Remote",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I gained hands-on experience with tools like Selenium, JMeter, and Appium, along with C# and OOP. I developed skills in manual and automated testing, REST API testing, and bug tracking, while learning agile methodologies like Scrum.",
+    date: "January 2023 - September 2023",
+    icon: React.createElement(SiHtmlacademy),
+  },
+
+  {
+    title: "IU International University of Applied Sciences",
+    location: "Cologne, Germany",
+    description:
+      "At IU International University of Applied Sciences, I am pursuing a Bachelor of Science in Software Development, where I am gaining skills in Java, Spring Boot, JUnit, SQL, Hibernate, Selenium, and Git/GitHub. My studies include hands-on experience with data structures, algorithms, CI/CD, as well as working with frameworks like Spring, SpringBoot and tools such as IntelliJ/Eclipse and MySQL, providing a solid foundation for my ongoing development in software engineering.",
+    date: "2023 - current",
+    icon: React.createElement(FaUniversity),
   },
 ] as const;
-
 
 export const projectsData = [
   {
@@ -87,6 +115,10 @@ export const projectsData = [
 
 export const skillsData = [
   "Java",
+  "Java Syntax",
+  "Java Core",
+  "Maven",
+  "Java EE",
   "SQL",
   "HTML",
   "CSS",
@@ -98,7 +130,16 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Spring",
+  "Hibernate",
   "Docker",
-  "Java-Core"
-  
+  "Java-Core",
+  "Selenium",
+  "SpringBoot",
+  "Git",
+  "GitHub",
+  "JUnit",
+  "Linux",
+  "CI/CD",
+  "Eclipse",
+  "IntelliJ",
 ] as const;

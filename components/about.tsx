@@ -43,9 +43,9 @@ export default function About() {
           Bachelor's degree in Software Engineering at IU Internationale
           Hochschule.
         </span>{" "}
-        My primary expertise lies in working with{" "}
+        I’m actively learning and using {" "}
         <span className="font-medium"> Java and Spring technologies,</span>{" "}
-        where I enjoy building efficient and scalable backend solutions. As I
+        to build efficient and scalable backend solutions. As I
         continue developing my technical skills, I’m also passionate about
         understanding industry best practices and exploring new ways to create
         impactful software. I’m excited about the challenges and opportunities
