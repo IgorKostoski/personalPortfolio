@@ -87,6 +87,22 @@ export const experiencesData = [
     date: "2023 - current",
     icon: React.createElement(FaUniversity),
   },
+  {
+    title: "OTUS Java Developer Proffesional",
+    location: "Remote",
+    description:
+    "At OTUS Online Education, I am enhancing my Java development skills through their Java Developer professional program. The course covers a broad spectrum of technologies, including Netty, Lombok, Gradle, NIO, Spring Boot, Redis, Apache Kafka, RabbitMQ, and more. I am gaining hands-on experience with modern development practices such as Continuous Integration and Continuous Delivery (CI/CD), Java Virtual Machine (JVM) management, design patterns, and testing frameworks like JUnit, Mockito, and AssertJ. The program also includes a final project where I am working on a practical solution based on course knowledge, such as developing a custom ORM, building a socket server with NIO, or creating a distributed cache. This project aims to showcase high-quality code and serve as an excellent example for potential employers, demonstrating my technical expertise and problem-solving skills.",
+    date: "2025 - current",
+    icon: React.createElement(SiHtmlacademy),
+  },
+  {
+    title: "OTUS Databases",
+    location: "Remote",
+    description:
+    "At OTUS Online Education, I am further developing my expertise in databases through the Databases professional program. This course covers key technologies such as Cassandra, PostgreSQL, Redis, MySQL, MongoDB, and Tarantool, as well as SQL, DDL, DML, and design patterns. I am gaining hands-on experience with database management, optimization, and various data storage systems, building a strong foundation for a career in database administration and management.",
+    date: "2025 - current",
+    icon: React.createElement(SiHtmlacademy),
+  },
 ] as const;
 
 export const projectsData = [
