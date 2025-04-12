@@ -36,21 +36,30 @@ export default function About() {
         learn new technologies. I am currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
         developer.  */}
-        I'm a Junior Java Developer with a strong focus on{" "}
+        I’m an aspiring Java Developer with a strong focus on{" "}
         <span className="font-medium">backend</span> development, currently
         pursuing a{" "}
         <span className="font-medium">
           Bachelor's degree in Software Engineering at IU Internationale
           Hochschule.
         </span>{" "}
-        I’m actively learning and using {" "}
-        <span className="font-medium"> Java and Spring technologies,</span>{" "}
-        to build efficient and scalable backend solutions. As I
-        continue developing my technical skills, I’m also passionate about
-        understanding industry best practices and exploring new ways to create
-        impactful software. I’m excited about the challenges and opportunities
-        in backend development and am eager to grow my knowledge and contribute
-        to innovative projects.
+        With a solid foundation in{" "}
+        <span className="font-medium">
+          {" "}
+          Java, object-oriented programming, and web technologies
+        </span>{" "}
+        , I am actively expanding my skillset through hands-on projects,
+        professional certifications, and upcoming specialized training in Java
+        development and databases (OTUS, 2025).I’m particularly interested in
+        building robust, scalable backend solutions using Java, Spring Boot,
+        REST APIs, and related technologies. My previous experience in logistics
+        and customer-facing roles has strengthened my problem-solving skills,
+        attention to detail, and ability to work in structured, agile
+        environments.I’m a highly motivated career changer who thrives on
+        learning, and I’m eager to contribute to practical, real-world software
+        projects while continuously developing clean code practices and
+        deepening my understanding of modern development tools like Git, Docker,
+        and Maven.
       </p>
 
       <p>
